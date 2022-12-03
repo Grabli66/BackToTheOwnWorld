@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, Menus,
-  ActnList, Types;
+  ActnList, Types,
+  scenedata;
 
 type
 
@@ -19,7 +20,7 @@ type
     DeleteScenePartMenuItem: TMenuItem;
     AddDialogScenePartMenuItem: TMenuItem;
     AddTextScenePartMenuItem: TMenuItem;
-    NewGroupAction: TAction;
+    NewSceneAction: TAction;
     MainActionList: TActionList;
     MainToolbar: TToolBar;
     DialogTreeView: TTreeView;
@@ -33,9 +34,16 @@ type
     Separator2: TMenuItem;
     procedure DialogTreeViewContextPopup(Sender: TObject; MousePos: TPoint;
       var Handled: boolean);
-    procedure NewGroupActionExecute(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormDestroy(Sender: TObject);
+    procedure NewSceneActionExecute(Sender: TObject);
   private
-
+    // Данные игры
+    FGameData: TGameData;
+    // Корень в дереве для добавления персонажей
+    FPersonItemRoot: TTreeNode;
+    // Корень в дереве для добавления сцен
+    FSceneItemRoot: TTreeNode;
   public
 
   end;
@@ -49,6 +57,18 @@ implementation
 
 { TDialogEditorForm }
 
+procedure TDialogEditorForm.FormCreate(Sender: TObject);
+begin
+  FPersonItemRoot := DialogTreeView.Items.GetFirstNode.Items[0];
+  FSceneItemRoot := DialogTreeView.Items.GetFirstNode.Items[1];
+  FGameData := TGameData.Create;
+end;
+
+procedure TDialogEditorForm.FormDestroy(Sender: TObject);
+begin
+  FreeAndNil(FGameData);
+end;
+
 procedure TDialogEditorForm.DialogTreeViewContextPopup(Sender: TObject;
   MousePos: TPoint; var Handled: boolean);
 var
@@ -59,19 +79,38 @@ begin
   if node = nil then
     Exit;
 
+  node.Selected := True;
+
+  // Проверяет не корень ли дерева
+  if node = DialogTreeView.Items.GetFirstNode then
+    Exit();
+
+  if node = FPersonItemRoot then
+  begin
+    NewPersonMenuItem.Enabled := True;
+    DeletePersonMenuItem.Enabled := False;
+    NewSceneMenuItem.Enabled := False;
+    DeleteSceneMenuItem.Enabled := False;
+    AddScenePartMenuItems.Enabled := False;
+    DeleteScenePartMenuItem.Enabled := False;
+  end
+  else if node = FSceneItemRoot then
+  begin
+    NewPersonMenuItem.Enabled := False;
+    DeletePersonMenuItem.Enabled := False;
+    NewSceneMenuItem.Enabled := True;
+    DeleteSceneMenuItem.Enabled := False;
+    AddScenePartMenuItems.Enabled := False;
+    DeleteScenePartMenuItem.Enabled := False;
+  end;
+
   DialogTreeView.PopupMenu := DialogGroupEditorPopup;
   DialogGroupEditorPopup.PopUp;
 end;
 
-procedure TDialogEditorForm.NewGroupActionExecute(Sender: TObject);
-var
-  node: TTreeNode;
+procedure TDialogEditorForm.NewSceneActionExecute(Sender: TObject);
 begin
-  node := DialogTreeView.Items.GetFirstNode;
-  if node = nil then
-    Exit;
-
-  DialogTreeView.Items.AddChild(node, 'Новая группа');
+  DialogTreeView.Items.AddChild(FSceneItemRoot, 'Новая сцена');
 end;
 
 end.

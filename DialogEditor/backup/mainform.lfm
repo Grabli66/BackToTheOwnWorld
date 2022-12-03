@@ -6,6 +6,7 @@ object DialogEditorForm: TDialogEditorForm
   Caption = 'DialogEditorForm'
   ClientHeight = 600
   ClientWidth = 900
+  OnCreate = FormCreate
   LCLVersion = '2.3.0.0'
   object DialogTreeView: TTreeView
     Left = 0
@@ -19,8 +20,11 @@ object DialogEditorForm: TDialogEditorForm
     OnContextPopup = DialogTreeViewContextPopup
     Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
     Items.Data = {
-      F9FFFFFF020001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF000000000000
-      0000000C000000D09AD0BED180D0B5D0BDD18C
+      F9FFFFFF020001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF020000000000
+      0000010C000000D09AD0BED180D0B5D0BDD18CFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFF00000000000000000012000000D09FD0B5D180D181D0BED0BDD0B0D0B6
+      D0B8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000A000000D0
+      A1D186D0B5D0BDD18B
     }
   end
   object MainToolbar: TToolBar
@@ -61,7 +65,7 @@ object DialogEditorForm: TDialogEditorForm
       Caption = '-'
     end
     object NewSceneMenuItem: TMenuItem
-      Action = NewGroupAction
+      Action = NewSceneAction
       Caption = 'Новая сцена'
     end
     object DeleteSceneMenuItem: TMenuItem
@@ -86,9 +90,9 @@ object DialogEditorForm: TDialogEditorForm
   object MainActionList: TActionList
     Left = 757
     Top = 114
-    object NewGroupAction: TAction
+    object NewSceneAction: TAction
       Caption = 'Новая группа'
-      OnExecute = NewGroupActionExecute
+      OnExecute = NewSceneActionExecute
     end
   end
 end

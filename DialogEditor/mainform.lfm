@@ -6,6 +6,8 @@ object DialogEditorForm: TDialogEditorForm
   Caption = 'DialogEditorForm'
   ClientHeight = 600
   ClientWidth = 900
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
   LCLVersion = '2.3.0.0'
   object DialogTreeView: TTreeView
     Left = 0
@@ -64,7 +66,7 @@ object DialogEditorForm: TDialogEditorForm
       Caption = '-'
     end
     object NewSceneMenuItem: TMenuItem
-      Action = NewGroupAction
+      Action = NewSceneAction
       Caption = 'Новая сцена'
     end
     object DeleteSceneMenuItem: TMenuItem
@@ -89,9 +91,9 @@ object DialogEditorForm: TDialogEditorForm
   object MainActionList: TActionList
     Left = 757
     Top = 114
-    object NewGroupAction: TAction
+    object NewSceneAction: TAction
       Caption = 'Новая группа'
-      OnExecute = NewGroupActionExecute
+      OnExecute = NewSceneActionExecute
     end
   end
 end

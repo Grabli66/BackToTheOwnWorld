@@ -2,7 +2,7 @@
 <CONFIG>
   <ProjectSession>
     <Version Value="12"/>
-    <BuildModes Active="Default"/>
+    <BuildModes Active="Debug"/>
     <Units>
       <Unit>
         <Filename Value="DialogEditor.lpr"/>
@@ -11,7 +11,7 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="21"/>
+        <UsageCount Value="25"/>
       </Unit>
       <Unit>
         <Filename Value="mainform.pas"/>
@@ -21,102 +21,38 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="MainForm"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="42"/>
-        <CursorPos X="23" Y="51"/>
-        <UsageCount Value="21"/>
+        <TopLine Value="47"/>
+        <CursorPos X="25" Y="69"/>
+        <UsageCount Value="25"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/lazarus/lcl/comctrls.pp"/>
+        <UnitName Value="ComCtrls"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3134"/>
+        <CursorPos X="24" Y="3157"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="scenedata.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="37"/>
+        <CursorPos X="26" Y="54"/>
+        <UsageCount Value="23"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="../../../fpcupdeluxe/fpcsrc/rtl/objpas/classes/classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2055"/>
+        <CursorPos X="3" Y="2071"/>
+        <UsageCount Value="10"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="13" Column="5"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="17" Column="5"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="14" Column="66"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="20" Column="13"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="21" Column="13"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="28" Column="21"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="24" Column="29" TopLine="6"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="45" TopLine="18"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="46" TopLine="19"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="47" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="50" TopLine="21"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="45" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="46" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="47" TopLine="20"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="51" Column="11" TopLine="22"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="39" Column="31" TopLine="23"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="41" Column="31" TopLine="24"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="66" Column="63" TopLine="34"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="53" Column="27" TopLine="37"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="66" Column="66" TopLine="34"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="67" Column="66" TopLine="35"/>
-      </Position>
-      <Position>
-        <Filename Value="mainform.pas"/>
-        <Caret Line="68" Column="66" TopLine="36"/>
-      </Position>
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="69" Column="66" TopLine="37"/>
@@ -148,6 +84,94 @@
       <Position>
         <Filename Value="mainform.pas"/>
         <Caret Line="57" Column="22" TopLine="42"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="58" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="59" Column="20" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="66" Column="32" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="74" Column="19" TopLine="50"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="70" Column="20" TopLine="56"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="40" Column="20" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="58" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="59" TopLine="36"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="90" Column="14" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="107" Column="23" TopLine="78"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="11" Column="32"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="41" Column="34" TopLine="11"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="60" Column="21" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="61" Column="35" TopLine="43"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="63" Column="7" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="41" Column="10" TopLine="19"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="40" Column="21" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="41" Column="24" TopLine="16"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="42" Column="34" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="61" Column="24" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="scenedata.pas"/>
+        <Caret Line="62" Column="34" TopLine="40"/>
+      </Position>
+      <Position>
+        <Filename Value="mainform.pas"/>
+        <Caret Line="64" Column="32" TopLine="47"/>
       </Position>
     </JumpHistory>
     <RunParams>
