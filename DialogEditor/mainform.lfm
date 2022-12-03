@@ -1,0 +1,97 @@
+object DialogEditorForm: TDialogEditorForm
+  Left = 1020
+  Height = 600
+  Top = 249
+  Width = 900
+  Caption = 'DialogEditorForm'
+  ClientHeight = 600
+  ClientWidth = 900
+  LCLVersion = '2.3.0.0'
+  object DialogTreeView: TTreeView
+    Left = 0
+    Height = 550
+    Top = 40
+    Width = 312
+    Anchors = [akTop, akLeft, akBottom]
+    AutoExpand = True
+    ReadOnly = True
+    TabOrder = 0
+    OnContextPopup = DialogTreeViewContextPopup
+    Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+    Items.Data = {
+      F9FFFFFF020001000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF020000000000
+      0000010C000000D09AD0BED180D0B5D0BDD18CFFFFFFFFFFFFFFFFFFFFFFFFFF
+      FFFFFF00000000000000000012000000D09FD0B5D180D181D0BED0BDD0B0D0B6
+      D0B8FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF0000000000000000000A000000D0
+      A1D186D0B5D0BDD18B
+    }
+  end
+  object MainToolbar: TToolBar
+    Left = 0
+    Height = 36
+    Top = 0
+    Width = 900
+    ButtonHeight = 36
+    ButtonWidth = 36
+    Caption = 'MainToolbar'
+    TabOrder = 1
+    object NewDialogsButton: TToolButton
+      Left = 1
+      Top = 2
+      Caption = 'NewDialogsButton'
+    end
+    object OpenDialogsButton: TToolButton
+      Left = 37
+      Top = 2
+      Caption = 'OpenDialogsButton'
+    end
+    object SaveDialogsButton: TToolButton
+      Left = 73
+      Top = 2
+      Caption = 'SaveDialogsButton'
+    end
+  end
+  object DialogGroupEditorPopup: TPopupMenu
+    Left = 752
+    Top = 48
+    object NewPersonMenuItem: TMenuItem
+      Caption = 'Новый персонаж'
+    end
+    object DeletePersonMenuItem: TMenuItem
+      Caption = 'Удалить персонажа'
+    end
+    object Separator1: TMenuItem
+      Caption = '-'
+    end
+    object NewSceneMenuItem: TMenuItem
+      Action = NewGroupAction
+      Caption = 'Новая сцена'
+    end
+    object DeleteSceneMenuItem: TMenuItem
+      Caption = 'Удалить сцену'
+    end
+    object Separator2: TMenuItem
+      Caption = '-'
+    end
+    object AddScenePartMenuItems: TMenuItem
+      Caption = 'Добавить часть сцены'
+      object AddTextScenePartMenuItem: TMenuItem
+        Caption = 'Текст'
+      end
+      object AddDialogScenePartMenuItem: TMenuItem
+        Caption = 'Диалог'
+      end
+    end
+    object DeleteScenePartMenuItem: TMenuItem
+      Caption = 'Удалить часть сцены'
+    end
+  end
+  object MainActionList: TActionList
+    Left = 757
+    Top = 114
+    object NewGroupAction: TAction
+      Caption = 'Новая группа'
+      OnExecute = NewGroupActionExecute
+    end
+  end
+end
